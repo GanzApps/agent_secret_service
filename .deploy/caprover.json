@@ -1,0 +1,15 @@
+{
+  "service_name": "agent-secret-service",
+  "image_version": "latest",
+  "build_context": ".",
+  "dockerfile_path": "Dockerfile",
+  "isHttpOnly": true,
+  "http_port": "8311",
+  "env": [
+    {
+      "key": "AGENT_SECRET_SERVICE_TOKEN",
+      "value": "changeme_service_token",
+      "generated": true
+    }
+  ]
+}
