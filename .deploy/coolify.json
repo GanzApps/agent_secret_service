@@ -1,0 +1,11 @@
+{
+  "name": "agent-secret-service",
+  "port": "8311",
+  "env": [
+    {
+      "key": "AGENT_SECRET_SERVICE_TOKEN",
+      "value": "changeme_service_token",
+      "generated": true
+    }
+  ]
+}
