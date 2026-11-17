@@ -4,9 +4,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8311:8311"
+      - "127.0.0.1:8311:8311"
     environment:
-      AGENT_SECRET_SERVICE_TOKEN: "3|NYJxlTbMfzXhcCIN4tnjWALdW5SJzGVbLqP9KHRwb3c8c79f"
+      AGENT_SECRET_SERVICE_TOKEN: "${AGENT_SECRET_SERVICE_TOKEN:?set in .env}"
       AGENT_SECRET_SERVICE_PORT: "8311"
-      # AGENT_SECRET_DOPPLER_TOKEN: "set this in Coolify after import"
+      AGENT_SECRET_DOPPLER_TOKEN: "${AGENT_SECRET_DOPPLER_TOKEN:?set in .env}"
     restart: unless-stopped
